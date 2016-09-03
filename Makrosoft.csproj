@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{709DE051-2B0E-4137-A692-9EE9C8D20FA8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Makrosoft</RootNamespace>
+    <AssemblyName>SehasoftV10</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo %281%29.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v15.1.Core, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BitmapImage.cs" />
+    <Compile Include="Classlar\Ekranlar.cs" />
+    <Compile Include="Classlar\Fonksiyon.cs" />
+    <Compile Include="Classlar\Mesajlar.cs" />
+    <Compile Include="frmMasaustu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMasaustu.Designer.cs">
+      <DependentUpon>frmMasaustu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ham\HamKart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ham\HamKart.Designer.cs">
+      <DependentUpon>HamKart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMasterForm.Designer.cs">
+      <DependentUpon>frmMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StokModulu\Classlar\clsStokAnaGrupTanitimKarti.cs" />
+    <Compile Include="StokModulu\frmStokAltGrupTanitimKarti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StokModulu\frmStokAltGrupTanitimKarti.Designer.cs">
+      <DependentUpon>frmStokAltGrupTanitimKarti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StokModulu\frmStokAnaGrupTanitimKarti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StokModulu\frmStokAnaGrupTanitimKarti.Designer.cs">
+      <DependentUpon>frmStokAnaGrupTanitimKarti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StokModulu\frmStokAnaSaglayiciTanitimKarti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StokModulu\frmStokAnaSaglayiciTanitimKarti.Designer.cs">
+      <DependentUpon>frmStokAnaSaglayiciTanitimKarti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StokModulu\frmStokKategori1TanitimKarti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StokModulu\frmStokKategori1TanitimKarti.Designer.cs">
+      <DependentUpon>frmStokKategori1TanitimKarti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StokModulu\frmStokKategori2TanitimKarti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StokModulu\frmStokKategori2TanitimKarti.Designer.cs">
+      <DependentUpon>frmStokKategori2TanitimKarti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StokModulu\frmStokKategori3TanitimKarti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StokModulu\frmStokKategori3TanitimKarti.Designer.cs">
+      <DependentUpon>frmStokKategori3TanitimKarti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StokModulu\frmStokKategori4TanitimKarti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StokModulu\frmStokKategori4TanitimKarti.Designer.cs">
+      <DependentUpon>frmStokKategori4TanitimKarti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StokModulu\frmStokMarkaTanitimKarti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StokModulu\frmStokMarkaTanitimKarti.Designer.cs">
+      <DependentUpon>frmStokMarkaTanitimKarti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StokModulu\frmStokModelTanitimKarti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StokModulu\frmStokModelTanitimKarti.Designer.cs">
+      <DependentUpon>frmStokModelTanitimKarti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StokModulu\frmStokMuhasebeGrupTanitimKarti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StokModulu\frmStokMuhasebeGrupTanitimKarti.Designer.cs">
+      <DependentUpon>frmStokMuhasebeGrupTanitimKarti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StokModulu\frmStokOzelKod1TanitimKarti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StokModulu\frmStokOzelKod1TanitimKarti.Designer.cs">
+      <DependentUpon>frmStokOzelKod1TanitimKarti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StokModulu\frmStokOzelKod2TanitimKarti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StokModulu\frmStokOzelKod2TanitimKarti.Designer.cs">
+      <DependentUpon>frmStokOzelKod2TanitimKarti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StokModulu\frmStokOzelKod3TanitimKarti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StokModulu\frmStokOzelKod3TanitimKarti.Designer.cs">
+      <DependentUpon>frmStokOzelKod3TanitimKarti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StokModulu\frmStokPaketTanitimKarti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StokModulu\frmStokPaketTanitimKarti.Designer.cs">
+      <DependentUpon>frmStokPaketTanitimKarti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StokModulu\frmStokSektorTanitimKarti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StokModulu\frmStokSektorTanitimKarti.Designer.cs">
+      <DependentUpon>frmStokSektorTanitimKarti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StokModulu\frmStokTanitimKarti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StokModulu\frmStokTanitimKarti.Designer.cs">
+      <DependentUpon>frmStokTanitimKarti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StokModulu\frmStokUreticiTanitimKarti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StokModulu\frmStokUreticiTanitimKarti.Designer.cs">
+      <DependentUpon>frmStokUreticiTanitimKarti.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmMasaustu.resx">
+      <DependentUpon>frmMasaustu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ham\HamKart.resx">
+      <DependentUpon>HamKart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMasterForm.resx">
+      <DependentUpon>frmMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StokModulu\frmStokAltGrupTanitimKarti.resx">
+      <DependentUpon>frmStokAltGrupTanitimKarti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StokModulu\frmStokAnaGrupTanitimKarti.resx">
+      <DependentUpon>frmStokAnaGrupTanitimKarti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StokModulu\frmStokAnaSaglayiciTanitimKarti.resx">
+      <DependentUpon>frmStokAnaSaglayiciTanitimKarti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StokModulu\frmStokKategori1TanitimKarti.resx">
+      <DependentUpon>frmStokKategori1TanitimKarti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StokModulu\frmStokKategori2TanitimKarti.resx">
+      <DependentUpon>frmStokKategori2TanitimKarti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StokModulu\frmStokKategori3TanitimKarti.resx">
+      <DependentUpon>frmStokKategori3TanitimKarti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StokModulu\frmStokKategori4TanitimKarti.resx">
+      <DependentUpon>frmStokKategori4TanitimKarti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StokModulu\frmStokMarkaTanitimKarti.resx">
+      <DependentUpon>frmStokMarkaTanitimKarti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StokModulu\frmStokModelTanitimKarti.resx">
+      <DependentUpon>frmStokModelTanitimKarti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StokModulu\frmStokMuhasebeGrupTanitimKarti.resx">
+      <DependentUpon>frmStokMuhasebeGrupTanitimKarti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StokModulu\frmStokOzelKod1TanitimKarti.resx">
+      <DependentUpon>frmStokOzelKod1TanitimKarti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StokModulu\frmStokOzelKod2TanitimKarti.resx">
+      <DependentUpon>frmStokOzelKod2TanitimKarti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StokModulu\frmStokOzelKod3TanitimKarti.resx">
+      <DependentUpon>frmStokOzelKod3TanitimKarti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StokModulu\frmStokPaketTanitimKarti.resx">
+      <DependentUpon>frmStokPaketTanitimKarti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StokModulu\frmStokSektorTanitimKarti.resx">
+      <DependentUpon>frmStokSektorTanitimKarti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StokModulu\frmStokTanitimKarti.resx">
+      <DependentUpon>frmStokTanitimKarti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="StokModulu\frmStokUreticiTanitimKarti.resx">
+      <DependentUpon>frmStokUreticiTanitimKarti.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo %281%29.ico" />
+    <None Include="Resources\821.png" />
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
