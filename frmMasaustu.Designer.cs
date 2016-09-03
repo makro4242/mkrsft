@@ -37,7 +37,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Center;
-            this.BackgroundImageStore = global::Makrosoft.Properties.Resources._821;
             this.ClientSize = new System.Drawing.Size(938, 839);
             this.DoubleBuffered = true;
             this.Name = "frmMasaustu";
