@@ -55,3 +55,4 @@ D:\Users\Admin\Documents\GitHub\mkrsft\bin\Debug\Makrosoft.exe
 D:\Users\Admin\Documents\GitHub\mkrsft\bin\Debug\Makrosoft.pdb
 D:\Users\Admin\Documents\GitHub\mkrsft\obj\Debug\Makrosoft.exe
 D:\Users\Admin\Documents\GitHub\mkrsft\obj\Debug\Makrosoft.pdb
+D:\Users\Admin\Documents\GitHub\mkrsft\obj\Debug\Makrosoft.csprojResolveAssemblyReference.cache
