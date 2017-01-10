@@ -57,9 +57,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BitmapImage.cs" />
-    <Compile Include="Classlar\Ekranlar.cs" />
-    <Compile Include="Classlar\Fonksiyon.cs" />
-    <Compile Include="Classlar\Mesajlar.cs" />
+    <Compile Include="CKartlar\CEkranlar.cs" />
+    <Compile Include="CKartlar\CFonksiyon.cs" />
+    <Compile Include="CKartlar\CKullanicilar.cs" />
+    <Compile Include="CKartlar\CMesajlar.cs" />
+    <Compile Include="FrmKullanici.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKullanici.Designer.cs">
+      <DependentUpon>FrmKullanici.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMasaustu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +196,12 @@
     <Compile Include="StokModulu\frmStokUreticiTanitimKarti.Designer.cs">
       <DependentUpon>frmStokUreticiTanitimKarti.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FrmKullanici.resx">
+      <DependentUpon>FrmKullanici.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMasaustu.resx">
       <DependentUpon>frmMasaustu.cs</DependentUpon>
     </EmbeddedResource>
@@ -269,6 +288,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo %281%29.ico" />
+    <None Include="Resources\apply_32x32.png" />
     <None Include="Resources\821.png" />
     <None Include="Resources\logo.png" />
   </ItemGroup>
