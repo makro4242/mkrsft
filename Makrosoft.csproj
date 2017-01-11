@@ -61,6 +61,7 @@
     <Compile Include="CKartlar\CFonksiyon.cs" />
     <Compile Include="CKartlar\CKullanicilar.cs" />
     <Compile Include="CKartlar\CMesajlar.cs" />
+<<<<<<< HEAD
     <Compile Include="FrmKullaniciEkle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +73,13 @@
     </Compile>
     <Compile Include="FrmKullanicilar.Designer.cs">
       <DependentUpon>FrmKullanicilar.cs</DependentUpon>
+=======
+    <Compile Include="FrmKullanici.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKullanici.Designer.cs">
+      <DependentUpon>FrmKullanici.cs</DependentUpon>
+>>>>>>> origin/master
     </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
@@ -202,11 +210,16 @@
     <Compile Include="StokModulu\frmStokUreticiTanitimKarti.Designer.cs">
       <DependentUpon>frmStokUreticiTanitimKarti.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <EmbeddedResource Include="FrmKullaniciEkle.resx">
       <DependentUpon>FrmKullaniciEkle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmKullanicilar.resx">
       <DependentUpon>FrmKullanicilar.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="FrmKullanici.resx">
+      <DependentUpon>FrmKullanici.cs</DependentUpon>
+>>>>>>> origin/master
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>

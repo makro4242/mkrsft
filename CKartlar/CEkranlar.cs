@@ -4,9 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+<<<<<<< HEAD
 namespace Makrosoft.CKartlar
 {
     public class CEkranlar
+=======
+namespace Makrosoft.Classlar
+{
+    class Ekranlar
+>>>>>>> origin/master
     {
         public void StokAnaGrupTanitimKartiAc(Boolean Sec)
         {

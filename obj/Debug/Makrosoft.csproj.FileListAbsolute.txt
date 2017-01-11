@@ -137,6 +137,10 @@ D:\Users\dilan\Documents\GitHub\mkrsft\bin\Debug\de\DevExpress.Office.v15.1.Core
 D:\Users\dilan\Documents\GitHub\mkrsft\bin\Debug\es\DevExpress.Office.v15.1.Core.resources.dll
 D:\Users\dilan\Documents\GitHub\mkrsft\bin\Debug\ja\DevExpress.Office.v15.1.Core.resources.dll
 D:\Users\dilan\Documents\GitHub\mkrsft\bin\Debug\ru\DevExpress.Office.v15.1.Core.resources.dll
+<<<<<<< HEAD
+=======
+D:\Users\dilan\Documents\GitHub\mkrsft\obj\Debug\Makrosoft.csprojResolveAssemblyReference.cache
+>>>>>>> origin/master
 D:\Users\dilan\Documents\GitHub\mkrsft\obj\Debug\Makrosoft.frmMasaustu.resources
 D:\Users\dilan\Documents\GitHub\mkrsft\obj\Debug\Makrosoft.Ham.HamKart.resources
 D:\Users\dilan\Documents\GitHub\mkrsft\obj\Debug\Makrosoft.frmMasterForm.resources
@@ -163,6 +167,10 @@ D:\Users\dilan\Documents\GitHub\mkrsft\obj\Debug\Makrosoft.exe.licenses
 D:\Users\dilan\Documents\GitHub\mkrsft\obj\Debug\Makrosoft.exe
 D:\Users\dilan\Documents\GitHub\mkrsft\obj\Debug\Makrosoft.pdb
 D:\Users\dilan\Documents\GitHub\mkrsft\obj\Debug\Makrosoft.FrmLogin.resources
+<<<<<<< HEAD
 D:\Users\dilan\Documents\GitHub\mkrsft\obj\Debug\Makrosoft.FrmKullaniciEkle.resources
 D:\Users\dilan\Documents\GitHub\mkrsft\obj\Debug\Makrosoft.FrmKullanicilar.resources
 D:\Users\dilan\Documents\GitHub\mkrsft\obj\Debug\Makrosoft.csprojResolveAssemblyReference.cache
+=======
+D:\Users\dilan\Documents\GitHub\mkrsft\obj\Debug\Makrosoft.FrmKullanici.resources
+>>>>>>> origin/master
