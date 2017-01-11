@@ -10,8 +10,8 @@ namespace Makrosoft.StokModulu.Classlar
 {
     class clsStokAnaGrupTanitimKarti
     {
-        Makrosoft.Classlar.Fonksiyon Dbase = new Makrosoft.Classlar.Fonksiyon();
-    
+        CKartlar.CFonksiyon Dbase = new Makrosoft.CKartlar.CFonksiyon();
+
         public DataTable Listele()
         {
             string sql = "SELECT * FROM STOK_ANA_GRUPLARI ORDER BY sag_kod";

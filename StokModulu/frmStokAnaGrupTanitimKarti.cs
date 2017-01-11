@@ -14,8 +14,8 @@ namespace Makrosoft.StokModulu
     public partial class frmStokAnaGrupTanitimKarti : Form
     {
         Classlar.clsStokAnaGrupTanitimKarti StokAnaGrupTanitimKarti = new Classlar.clsStokAnaGrupTanitimKarti();
-        Makrosoft.Classlar.Fonksiyon dgs = new Makrosoft.Classlar.Fonksiyon();
-        Makrosoft.Classlar.Mesajlar Mesajlar = new Makrosoft.Classlar.Mesajlar();
+        Makrosoft.CKartlar.CFonksiyon dgs = new Makrosoft.CKartlar.CFonksiyon();
+        Makrosoft.CKartlar.CMesajlar Mesajlar = new Makrosoft.CKartlar.CMesajlar();
         Boolean Secimicinacildimi = false;
         Boolean Edit = false;
 

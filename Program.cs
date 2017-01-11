@@ -16,7 +16,7 @@ namespace Makrosoft
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMasterForm());
+            Application.Run(new FrmLogin());
         }
     }
 }
