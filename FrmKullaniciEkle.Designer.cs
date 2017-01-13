@@ -30,11 +30,24 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmKullaniciEkle));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.btnKlavyeKisayol = new DevExpress.XtraEditors.SimpleButton();
+            this.btnHelp = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
+            this.btnOnceki = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSonraki = new DevExpress.XtraEditors.SimpleButton();
+            this.btnYeni = new DevExpress.XtraEditors.SimpleButton();
             this.btnSil = new DevExpress.XtraEditors.SimpleButton();
             this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
-            this.btnGuncelle = new DevExpress.XtraEditors.SimpleButton();
+            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
+            this.cmbPasif = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cmbSifreDegis = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.txtEMail = new DevExpress.XtraEditors.TextEdit();
+            this.txtSonIP = new DevExpress.XtraEditors.TextEdit();
+            this.txtUzunAdi = new DevExpress.XtraEditors.TextEdit();
+            this.txtIlkIP = new DevExpress.XtraEditors.TextEdit();
+            this.txtSifre = new DevExpress.XtraEditors.TextEdit();
+            this.txtKullaniciAdi = new DevExpress.XtraEditors.ButtonEdit();
+            this.txtKullKayitNo = new DevExpress.XtraEditors.ButtonEdit();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -44,32 +57,21 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnHelp = new DevExpress.XtraEditors.SimpleButton();
-            this.btnKlavyeKisayol = new DevExpress.XtraEditors.SimpleButton();
-            this.txtKullKayitNo = new DevExpress.XtraEditors.ButtonEdit();
-            this.txtKullaniciAdi = new DevExpress.XtraEditors.ButtonEdit();
-            this.txtSifre = new DevExpress.XtraEditors.TextEdit();
-            this.txtUzunAdi = new DevExpress.XtraEditors.TextEdit();
-            this.txtEMail = new DevExpress.XtraEditors.TextEdit();
-            this.cmbSifreDegis = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.cmbPasif = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.txtIlkIP = new DevExpress.XtraEditors.TextEdit();
-            this.txtSonIP = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKullKayitNo.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKullaniciAdi.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSifre.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtUzunAdi.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtEMail.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbSifreDegis.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbPasif.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtIlkIP.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbSifreDegis.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEMail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSonIP.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUzunAdi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIlkIP.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSifre.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKullaniciAdi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKullKayitNo.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -84,18 +86,108 @@
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "groupControl1";
             // 
+            // btnKlavyeKisayol
+            // 
+            this.btnKlavyeKisayol.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnKlavyeKisayol.Image = ((System.Drawing.Image)(resources.GetObject("btnKlavyeKisayol.Image")));
+            this.btnKlavyeKisayol.Location = new System.Drawing.Point(27, 2);
+            this.btnKlavyeKisayol.Name = "btnKlavyeKisayol";
+            this.btnKlavyeKisayol.Size = new System.Drawing.Size(25, 25);
+            this.btnKlavyeKisayol.TabIndex = 1;
+            this.btnKlavyeKisayol.Text = "simpleButton2";
+            // 
+            // btnHelp
+            // 
+            this.btnHelp.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnHelp.Image = ((System.Drawing.Image)(resources.GetObject("btnHelp.Image")));
+            this.btnHelp.Location = new System.Drawing.Point(2, 2);
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Size = new System.Drawing.Size(25, 25);
+            this.btnHelp.TabIndex = 0;
+            this.btnHelp.Text = "simpleButton1";
+            // 
             // groupControl2
             // 
+            this.groupControl2.Controls.Add(this.btnOnceki);
+            this.groupControl2.Controls.Add(this.btnSonraki);
+            this.groupControl2.Controls.Add(this.btnYeni);
             this.groupControl2.Controls.Add(this.btnSil);
             this.groupControl2.Controls.Add(this.btnKaydet);
-            this.groupControl2.Controls.Add(this.btnGuncelle);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupControl2.Location = new System.Drawing.Point(0, 361);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.ShowCaption = false;
             this.groupControl2.Size = new System.Drawing.Size(633, 64);
-            this.groupControl2.TabIndex = 1;
+            this.groupControl2.TabIndex = 2;
             this.groupControl2.Text = "groupControl2";
+            // 
+            // btnOnceki
+            // 
+            this.btnOnceki.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnOnceki.BackgroundImage")));
+            this.btnOnceki.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnOnceki.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnOnceki.Image = ((System.Drawing.Image)(resources.GetObject("btnOnceki.Image")));
+            this.btnOnceki.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.btnOnceki.Location = new System.Drawing.Point(256, 2);
+            this.btnOnceki.Name = "btnOnceki";
+            this.btnOnceki.Size = new System.Drawing.Size(75, 60);
+            this.btnOnceki.TabIndex = 5;
+            this.btnOnceki.Text = "ÖNCEKİ";
+            this.btnOnceki.Click += new System.EventHandler(this.btnOnceki_Click);
+            // 
+            // btnSonraki
+            // 
+            this.btnSonraki.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSonraki.BackgroundImage")));
+            this.btnSonraki.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSonraki.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnSonraki.Image = ((System.Drawing.Image)(resources.GetObject("btnSonraki.Image")));
+            this.btnSonraki.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.btnSonraki.Location = new System.Drawing.Point(331, 2);
+            this.btnSonraki.Name = "btnSonraki";
+            this.btnSonraki.Size = new System.Drawing.Size(75, 60);
+            this.btnSonraki.TabIndex = 4;
+            this.btnSonraki.Text = "SONRAKİ";
+            this.btnSonraki.Click += new System.EventHandler(this.btnSonraki_Click);
+            // 
+            // btnYeni
+            // 
+            this.btnYeni.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnYeni.BackgroundImage")));
+            this.btnYeni.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnYeni.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnYeni.Image = ((System.Drawing.Image)(resources.GetObject("btnYeni.Image")));
+            this.btnYeni.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.btnYeni.Location = new System.Drawing.Point(406, 2);
+            this.btnYeni.Name = "btnYeni";
+            this.btnYeni.Size = new System.Drawing.Size(75, 60);
+            this.btnYeni.TabIndex = 0;
+            this.btnYeni.Text = "YENİ";
+            this.btnYeni.Click += new System.EventHandler(this.btnYeni_Click);
+            // 
+            // btnSil
+            // 
+            this.btnSil.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSil.BackgroundImage")));
+            this.btnSil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSil.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnSil.Image = ((System.Drawing.Image)(resources.GetObject("btnSil.Image")));
+            this.btnSil.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.btnSil.Location = new System.Drawing.Point(481, 2);
+            this.btnSil.Name = "btnSil";
+            this.btnSil.Size = new System.Drawing.Size(75, 60);
+            this.btnSil.TabIndex = 1;
+            this.btnSil.Text = "SİL";
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click_1);
+            // 
+            // btnKaydet
+            // 
+            this.btnKaydet.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnKaydet.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydet.Image")));
+            this.btnKaydet.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.btnKaydet.Location = new System.Drawing.Point(556, 2);
+            this.btnKaydet.Name = "btnKaydet";
+            this.btnKaydet.Size = new System.Drawing.Size(75, 60);
+            this.btnKaydet.TabIndex = 2;
+            this.btnKaydet.Text = "KAYDET";
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click_1);
             // 
             // groupControl3
             // 
@@ -122,48 +214,95 @@
             this.groupControl3.Name = "groupControl3";
             this.groupControl3.ShowCaption = false;
             this.groupControl3.Size = new System.Drawing.Size(633, 332);
-            this.groupControl3.TabIndex = 2;
+            this.groupControl3.TabIndex = 1;
             this.groupControl3.Text = "groupControl3";
             // 
-            // btnSil
+            // cmbPasif
             // 
-            this.btnSil.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSil.BackgroundImage")));
-            this.btnSil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSil.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnSil.Image = ((System.Drawing.Image)(resources.GetObject("btnSil.Image")));
-            this.btnSil.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnSil.Location = new System.Drawing.Point(406, 2);
-            this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(75, 60);
-            this.btnSil.TabIndex = 5;
-            this.btnSil.Text = "SİL";
-            this.btnSil.Click += new System.EventHandler(this.btnSil_Click_1);
+            this.cmbPasif.Location = new System.Drawing.Point(128, 170);
+            this.cmbPasif.Name = "cmbPasif";
+            this.cmbPasif.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbPasif.Properties.Items.AddRange(new object[] {
+            "Evet",
+            "Hayır"});
+            this.cmbPasif.Size = new System.Drawing.Size(134, 20);
+            this.cmbPasif.TabIndex = 6;
             // 
-            // btnKaydet
+            // cmbSifreDegis
             // 
-            this.btnKaydet.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnKaydet.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydet.Image")));
-            this.btnKaydet.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnKaydet.Location = new System.Drawing.Point(481, 2);
-            this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Size = new System.Drawing.Size(75, 60);
-            this.btnKaydet.TabIndex = 4;
-            this.btnKaydet.Text = "KAYDET";
-            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click_1);
+            this.cmbSifreDegis.Location = new System.Drawing.Point(128, 146);
+            this.cmbSifreDegis.Name = "cmbSifreDegis";
+            this.cmbSifreDegis.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbSifreDegis.Properties.Items.AddRange(new object[] {
+            "Serbest",
+            "Ayda bir",
+            "Üç ayda bir",
+            "Altı ayda bir",
+            "Yılda bir"});
+            this.cmbSifreDegis.Size = new System.Drawing.Size(134, 20);
+            this.cmbSifreDegis.TabIndex = 5;
             // 
-            // btnGuncelle
+            // txtEMail
             // 
-            this.btnGuncelle.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.btnGuncelle.Appearance.Options.UseFont = true;
-            this.btnGuncelle.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnGuncelle.Image = global::Makrosoft.Properties.Resources.apply_32x32;
-            this.btnGuncelle.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnGuncelle.Location = new System.Drawing.Point(556, 2);
-            this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(75, 60);
-            this.btnGuncelle.TabIndex = 3;
-            this.btnGuncelle.Text = "GÜNCELLE";
-            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click_1);
+            this.txtEMail.Location = new System.Drawing.Point(128, 122);
+            this.txtEMail.Name = "txtEMail";
+            this.txtEMail.Size = new System.Drawing.Size(249, 20);
+            this.txtEMail.TabIndex = 4;
+            this.txtEMail.MouseUp += new System.Windows.Forms.MouseEventHandler(this.txtEMail_MouseUp);
+            // 
+            // txtSonIP
+            // 
+            this.txtSonIP.Location = new System.Drawing.Point(128, 244);
+            this.txtSonIP.Name = "txtSonIP";
+            this.txtSonIP.Size = new System.Drawing.Size(134, 20);
+            this.txtSonIP.TabIndex = 8;
+            // 
+            // txtUzunAdi
+            // 
+            this.txtUzunAdi.Location = new System.Drawing.Point(128, 81);
+            this.txtUzunAdi.Name = "txtUzunAdi";
+            this.txtUzunAdi.Size = new System.Drawing.Size(249, 20);
+            this.txtUzunAdi.TabIndex = 3;
+            this.txtUzunAdi.MouseUp += new System.Windows.Forms.MouseEventHandler(this.txtUzunAdi_MouseUp);
+            // 
+            // txtIlkIP
+            // 
+            this.txtIlkIP.Location = new System.Drawing.Point(128, 220);
+            this.txtIlkIP.Name = "txtIlkIP";
+            this.txtIlkIP.Size = new System.Drawing.Size(134, 20);
+            this.txtIlkIP.TabIndex = 7;
+            // 
+            // txtSifre
+            // 
+            this.txtSifre.Location = new System.Drawing.Point(128, 57);
+            this.txtSifre.Name = "txtSifre";
+            this.txtSifre.Properties.PasswordChar = '*';
+            this.txtSifre.Size = new System.Drawing.Size(134, 20);
+            this.txtSifre.TabIndex = 2;
+            // 
+            // txtKullaniciAdi
+            // 
+            this.txtKullaniciAdi.Location = new System.Drawing.Point(128, 33);
+            this.txtKullaniciAdi.Name = "txtKullaniciAdi";
+            this.txtKullaniciAdi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.txtKullaniciAdi.Size = new System.Drawing.Size(134, 20);
+            this.txtKullaniciAdi.TabIndex = 1;
+            this.txtKullaniciAdi.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.txtKullaniciAdi_ButtonClick);
+            this.txtKullaniciAdi.MouseUp += new System.Windows.Forms.MouseEventHandler(this.txtKullaniciAdi_MouseUp);
+            // 
+            // txtKullKayitNo
+            // 
+            this.txtKullKayitNo.Location = new System.Drawing.Point(128, 9);
+            this.txtKullKayitNo.Name = "txtKullKayitNo";
+            this.txtKullKayitNo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.txtKullKayitNo.Properties.ReadOnly = true;
+            this.txtKullKayitNo.Size = new System.Drawing.Size(134, 20);
+            this.txtKullKayitNo.TabIndex = 0;
+            this.txtKullKayitNo.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.txtKullKayitNo_ButtonClick_1);
             // 
             // label8
             // 
@@ -246,99 +385,6 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "No";
             // 
-            // btnHelp
-            // 
-            this.btnHelp.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnHelp.Image = ((System.Drawing.Image)(resources.GetObject("btnHelp.Image")));
-            this.btnHelp.Location = new System.Drawing.Point(2, 2);
-            this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Size = new System.Drawing.Size(25, 25);
-            this.btnHelp.TabIndex = 0;
-            this.btnHelp.Text = "simpleButton1";
-            // 
-            // btnKlavyeKisayol
-            // 
-            this.btnKlavyeKisayol.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnKlavyeKisayol.Image = ((System.Drawing.Image)(resources.GetObject("btnKlavyeKisayol.Image")));
-            this.btnKlavyeKisayol.Location = new System.Drawing.Point(27, 2);
-            this.btnKlavyeKisayol.Name = "btnKlavyeKisayol";
-            this.btnKlavyeKisayol.Size = new System.Drawing.Size(25, 25);
-            this.btnKlavyeKisayol.TabIndex = 1;
-            this.btnKlavyeKisayol.Text = "simpleButton2";
-            // 
-            // txtKullKayitNo
-            // 
-            this.txtKullKayitNo.Location = new System.Drawing.Point(128, 9);
-            this.txtKullKayitNo.Name = "txtKullKayitNo";
-            this.txtKullKayitNo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.txtKullKayitNo.Size = new System.Drawing.Size(134, 20);
-            this.txtKullKayitNo.TabIndex = 16;
-            this.txtKullKayitNo.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.txtKullKayitNo_ButtonClick_1);
-            // 
-            // txtKullaniciAdi
-            // 
-            this.txtKullaniciAdi.Location = new System.Drawing.Point(128, 33);
-            this.txtKullaniciAdi.Name = "txtKullaniciAdi";
-            this.txtKullaniciAdi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.txtKullaniciAdi.Size = new System.Drawing.Size(134, 20);
-            this.txtKullaniciAdi.TabIndex = 16;
-            this.txtKullaniciAdi.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.txtKullaniciAdi_ButtonClick);
-            // 
-            // txtSifre
-            // 
-            this.txtSifre.Location = new System.Drawing.Point(128, 57);
-            this.txtSifre.Name = "txtSifre";
-            this.txtSifre.Size = new System.Drawing.Size(134, 20);
-            this.txtSifre.TabIndex = 17;
-            // 
-            // txtUzunAdi
-            // 
-            this.txtUzunAdi.Location = new System.Drawing.Point(128, 81);
-            this.txtUzunAdi.Name = "txtUzunAdi";
-            this.txtUzunAdi.Size = new System.Drawing.Size(249, 20);
-            this.txtUzunAdi.TabIndex = 17;
-            // 
-            // txtEMail
-            // 
-            this.txtEMail.Location = new System.Drawing.Point(128, 122);
-            this.txtEMail.Name = "txtEMail";
-            this.txtEMail.Size = new System.Drawing.Size(249, 20);
-            this.txtEMail.TabIndex = 17;
-            // 
-            // cmbSifreDegis
-            // 
-            this.cmbSifreDegis.Location = new System.Drawing.Point(128, 146);
-            this.cmbSifreDegis.Name = "cmbSifreDegis";
-            this.cmbSifreDegis.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbSifreDegis.Size = new System.Drawing.Size(134, 20);
-            this.cmbSifreDegis.TabIndex = 18;
-            // 
-            // cmbPasif
-            // 
-            this.cmbPasif.Location = new System.Drawing.Point(128, 170);
-            this.cmbPasif.Name = "cmbPasif";
-            this.cmbPasif.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbPasif.Size = new System.Drawing.Size(134, 20);
-            this.cmbPasif.TabIndex = 18;
-            // 
-            // txtIlkIP
-            // 
-            this.txtIlkIP.Location = new System.Drawing.Point(128, 220);
-            this.txtIlkIP.Name = "txtIlkIP";
-            this.txtIlkIP.Size = new System.Drawing.Size(134, 20);
-            this.txtIlkIP.TabIndex = 17;
-            // 
-            // txtSonIP
-            // 
-            this.txtSonIP.Location = new System.Drawing.Point(128, 244);
-            this.txtSonIP.Name = "txtSonIP";
-            this.txtSonIP.Size = new System.Drawing.Size(134, 20);
-            this.txtSonIP.TabIndex = 17;
-            // 
             // FrmKullaniciEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -358,15 +404,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
             this.groupControl3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKullKayitNo.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKullaniciAdi.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSifre.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtUzunAdi.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtEMail.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbSifreDegis.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbPasif.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtIlkIP.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbSifreDegis.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEMail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSonIP.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUzunAdi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIlkIP.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSifre.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKullaniciAdi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKullKayitNo.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -379,7 +425,6 @@
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraEditors.SimpleButton btnSil;
         private DevExpress.XtraEditors.SimpleButton btnKaydet;
-        private DevExpress.XtraEditors.SimpleButton btnGuncelle;
         private DevExpress.XtraEditors.GroupControl groupControl3;
         private DevExpress.XtraEditors.ComboBoxEdit cmbPasif;
         private DevExpress.XtraEditors.ComboBoxEdit cmbSifreDegis;
@@ -399,5 +444,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private DevExpress.XtraEditors.SimpleButton btnYeni;
+        private DevExpress.XtraEditors.SimpleButton btnOnceki;
+        private DevExpress.XtraEditors.SimpleButton btnSonraki;
     }
 }

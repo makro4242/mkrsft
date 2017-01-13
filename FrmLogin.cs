@@ -18,7 +18,6 @@ namespace Makrosoft
             InitializeComponent();
             dtGununTarihi.EditValue = DateTime.Now;
         }
-<<<<<<< HEAD
 
         private void btnGiris_Click(object sender, EventArgs e)
         {
@@ -26,7 +25,5 @@ namespace Makrosoft
             f.Show();
             this.Hide();
         }
-=======
->>>>>>> origin/master
     }
 }

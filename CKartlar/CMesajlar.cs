@@ -5,15 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-<<<<<<< HEAD
 namespace Makrosoft.CKartlar
 {
     public class CMesajlar
-=======
-namespace Makrosoft.Classlar
-{
-    class Mesajlar
->>>>>>> origin/master
     {
         public Boolean Sor(string Mesaj)
         {

@@ -14,13 +14,28 @@ namespace Makrosoft
     public partial class FrmKullaniciEkle : DevExpress.XtraEditors.XtraForm
     {
         public String KullaniciKayitNo = "";
+        String SeciliDeger = "";
+        String SeciliAlan = "";
         public FrmKullaniciEkle()
         {
             InitializeComponent();
+            IlkEleman();
+            cmbSifreDegis.SelectedIndex = 1;
+            cmbPasif.SelectedIndex = 1;
         }
 
-        public static void Temizle(Control Ctrl)
+        public void Temizle()
         {
+            txtKullKayitNo.Text = "";
+            txtKullaniciAdi.Text = "";
+            txtSifre.Text = "";
+            txtUzunAdi.Text = "";
+            txtEMail.Text = "";
+            cmbSifreDegis.SelectedIndex = 1;
+            cmbPasif.SelectedIndex = 1;
+            txtIlkIP.Text = "";
+            txtSonIP.Text = "";
+
         }
 
         public void KullaniciKaydet()
@@ -30,8 +45,8 @@ namespace Makrosoft
             CKartlar.CFonksiyon.SorguAyarla();
             CKartlar.CFonksiyon.Sorgu.CommandText = "INSERT INTO KULLANICILAR (Kull_Adi,Kull_Sifre," +
                                                     "Kull_UzunAdi,Kull_EMail,Kull_SifreDegisim,Kull_Pasif,Kull_IlkIP," +
-                                                    "Kull_SonIP) VALUES ('@Kull_Adi','@Kull_Sifre','@Kull_UzunAdi'," +
-                                                    "'@Kull_EMail','@Kull_SifreDegisim','@Kull_Pasif','@Kull_IlkIP','@Kull_SonIP')";
+                                                    "Kull_SonIP) VALUES (@Kull_Adi,@Kull_Sifre,@Kull_UzunAdi," +
+                                                    "@Kull_EMail,@Kull_SifreDegisim,@Kull_Pasif,@Kull_IlkIP,@Kull_SonIP)";
 
             CKartlar.CFonksiyon.Sorgu.Parameters.AddWithValue("@Kull_Adi", txtKullaniciAdi.Text).ToString();
             CKartlar.CFonksiyon.Sorgu.Parameters.AddWithValue("@Kull_Sifre", txtSifre.Text).ToString();
@@ -63,8 +78,7 @@ namespace Makrosoft
         {
             CKartlar.CFonksiyon.Baglan();
             CKartlar.CFonksiyon.SorguAyarla();
-            CKartlar.CFonksiyon.Sorgu.CommandText = "DELETE FROM KULLANICILAR WHERE Kull_KayNo='@ID'";
-            CKartlar.CFonksiyon.Sorgu.Parameters.AddWithValue("@ID", Convert.ToInt32(txtKullKayitNo.Text));
+            CKartlar.CFonksiyon.Sorgu.CommandText = "DELETE FROM KULLANICILAR WHERE Kull_KayNo='" + txtKullKayitNo.Text + "'";
             try
             {
                 CKartlar.CFonksiyon.Sorgu.ExecuteNonQuery();
@@ -75,18 +89,18 @@ namespace Makrosoft
 
                 MessageBox.Show("Kullanıcı silinirken bir hata oluştu..");
             }
+            Temizle();
         }
 
         public void KullaniciGuncelle()
         {
             CKartlar.CFonksiyon.Baglan();
             CKartlar.CFonksiyon.SorguAyarla();
-            CKartlar.CFonksiyon.Sorgu.CommandText = "DELETE FROM KULLANICILAR WHERE Kull_KayNo='@ID'"; //O ıd dekı kaydı sildik.
+            CKartlar.CFonksiyon.Sorgu.CommandText = "DELETE FROM KULLANICILAR WHERE Kull_KayNo='" + txtKullKayitNo.Text + "'"; //O ıd dekı kaydı sildik.
             CKartlar.CFonksiyon.Sorgu.ExecuteNonQuery();
 
             CKartlar.CFonksiyon.SorguAyarla();
             KullaniciKaydet();// O ıd deki kaydı yenı halıyle kaydettık.
-
         }
 
         public void FormuDoldur(int id)
@@ -117,20 +131,17 @@ namespace Makrosoft
             }
 
         }
-        
-        private void btnSil_Click_1(object sender, EventArgs e)
-        {
-            KullaniciSil();
-        }
 
-        private void btnKaydet_Click_1(object sender, EventArgs e)
+        public void IlkEleman()
         {
-            KullaniciKaydet();
-        }
-
-        private void btnGuncelle_Click_1(object sender, EventArgs e)
-        {
-            KullaniciGuncelle();
+            CKartlar.CFonksiyon ctemp = new CKartlar.CFonksiyon();
+            int id = 0;
+            DataTable dt = ctemp.TabloCek("SELECT TOP 1 Kull_KayNo FROM KULLANICILAR ORDER BY Kull_KayNo ASC; ");
+            if (dt.Rows.Count > 0)
+            {
+                id = Convert.ToInt32(dt.Rows[0]["Kull_KayNo"].ToString());
+            }
+            FormuDoldur(id);
         }
 
         private void txtKullaniciAdi_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
@@ -146,7 +157,197 @@ namespace Makrosoft
             FrmKullanicilar FTemp = new FrmKullanicilar();
             FTemp.ShowDialog();
             KullaniciKayitNo = FTemp.KullaniciKayitNo;
-            FormuDoldur(int.Parse(KullaniciKayitNo));
+            if (KullaniciKayitNo == null || KullaniciKayitNo != "0")
+            {
+                FormuDoldur(int.Parse(KullaniciKayitNo));
+            }
+
+        }
+
+        private void btnSil_Click_1(object sender, EventArgs e)
+        {
+            KullaniciSil();
+        }
+
+        private void btnKaydet_Click_1(object sender, EventArgs e)
+        {
+            CKartlar.CFonksiyon ctemp = new CKartlar.CFonksiyon();
+            DataTable dt = ctemp.TabloCek("SELECT Kull_KayNo FROM KULLANICILAR");
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                if (dt.Rows[i]["Kull_KayNo"].ToString() == txtKullKayitNo.Text)
+                {
+                    KullaniciGuncelle();
+                    return;
+                }
+            }
+            KullaniciKaydet();
+        }
+
+        private void btnYeni_Click(object sender, EventArgs e)
+        {
+            Temizle();
+        }
+
+        private void btnOnceki_Click(object sender, EventArgs e)
+        {
+            CKartlar.CFonksiyon ctemp = new CKartlar.CFonksiyon();
+            int id = 0;
+
+            if (SeciliAlan == "txtKullaniciAdi.Text")
+            {
+                DataTable dt = ctemp.TabloCek("SELECT TOP 1 Kull_KayNo,Kull_Adi FROM KULLANICILAR WHERE Kull_Adi < '" + txtKullaniciAdi.Text + "'  " +
+                                              "ORDER BY Kull_Adi DESC");
+                if (dt.Rows.Count > 0)
+                {
+                    id = Convert.ToInt32(dt.Rows[0]["Kull_KayNo"].ToString());
+                }
+                else
+                {
+                    MessageBox.Show("Tablonun 'Ad' a göre ilk kaydı.");
+                }
+                FormuDoldur(id);
+                SeciliAlan = "";
+                SeciliDeger = "";
+            }
+            else if (SeciliAlan == "txtUzunAdi.Text")
+            {
+                DataTable dt = ctemp.TabloCek("SELECT TOP 1 Kull_KayNo,Kull_UzunAdi FROM KULLANICILAR WHERE Kull_UzunAdi < '" + txtUzunAdi.Text + "'  " +
+                                            "ORDER BY Kull_UzunAdi DESC");
+                if (dt.Rows.Count > 0)
+                {
+                    id = Convert.ToInt32(dt.Rows[0]["Kull_KayNo"].ToString());
+                }
+                else
+                {
+                    MessageBox.Show("Tablonun 'Uzun Ad' a göre ilk kaydı.");
+                }
+                FormuDoldur(id);
+                SeciliAlan = "";
+                SeciliDeger = "";
+            }
+            else if (SeciliAlan == "txtEMail.Text")
+            {
+                DataTable dt = ctemp.TabloCek("SELECT TOP 1 Kull_KayNo,Kull_EMail FROM KULLANICILAR WHERE Kull_EMail < '" + txtEMail.Text + "'  " +
+                                            "ORDER BY Kull_EMail DESC");
+                if (dt.Rows.Count > 0)
+                {
+                    id = Convert.ToInt32(dt.Rows[0]["Kull_KayNo"].ToString());
+                }
+                else
+                {
+                    MessageBox.Show("Tablonun 'E-MAil' e göre ilk kaydı.");
+                }
+                FormuDoldur(id);
+                SeciliAlan = "";
+                SeciliDeger = "";
+            }
+            else
+            {
+                DataTable dt = ctemp.TabloCek("SELECT TOP 1 Kull_KayNo FROM KULLANICILAR WHERE Kull_KayNo < '" + txtKullKayitNo.Text + "'  " +
+                                              "ORDER BY Kull_KayNo DESC");
+                if (dt.Rows.Count > 0)
+                {
+                    id = Convert.ToInt32(dt.Rows[0]["Kull_KayNo"].ToString());
+                }
+                else
+                {
+                    MessageBox.Show("Tablonun ilk kaydı.");
+                }
+                FormuDoldur(id);
+                SeciliAlan = "";
+                SeciliDeger = "";
+            }
+
+        }
+
+        private void btnSonraki_Click(object sender, EventArgs e)
+        {
+            CKartlar.CFonksiyon ctemp = new CKartlar.CFonksiyon();
+            int id = 0;
+
+            if (SeciliAlan == "txtKullaniciAdi.Text")
+            {
+                DataTable dt = ctemp.TabloCek("SELECT TOP 1 Kull_KayNo,Kull_Adi FROM KULLANICILAR WHERE Kull_Adi > '" + txtKullaniciAdi.Text + "'  " +
+                                              "ORDER BY Kull_Adi ASC");
+                if (dt.Rows.Count > 0)
+                {
+                    id = Convert.ToInt32(dt.Rows[0]["Kull_KayNo"].ToString());
+                }
+                else
+                {
+                    MessageBox.Show("Tablonun 'Ad' a göre son kaydı.");
+                }
+                FormuDoldur(id);
+                SeciliAlan = "";
+                SeciliDeger = "";
+            }
+            else if (SeciliAlan == "txtUzunAdi.Text")
+            {
+                DataTable dt = ctemp.TabloCek("SELECT TOP 1 Kull_KayNo,Kull_UzunAdi FROM KULLANICILAR WHERE Kull_UzunAdi > '" + txtUzunAdi.Text + "'  " +
+                                            "ORDER BY Kull_UzunAdi ASC");
+                if (dt.Rows.Count > 0)
+                {
+                    id = Convert.ToInt32(dt.Rows[0]["Kull_KayNo"].ToString());
+                }
+                else
+                {
+                    MessageBox.Show("Tablonun 'Uzun Ad' a göre son kaydı.");
+                }
+                FormuDoldur(id);
+                SeciliAlan = "";
+                SeciliDeger = "";
+            }
+            else if (SeciliAlan == "txtEMail.Text")
+            {
+                DataTable dt = ctemp.TabloCek("SELECT TOP 1 Kull_KayNo,Kull_EMail FROM KULLANICILAR WHERE Kull_EMail > '" + txtEMail.Text + "'  " +
+                                            "ORDER BY Kull_EMail ASC");
+                if (dt.Rows.Count > 0)
+                {
+                    id = Convert.ToInt32(dt.Rows[0]["Kull_KayNo"].ToString());
+                }
+                else
+                {
+                    MessageBox.Show("Tablonun 'E-MAil' e göre son kaydı.");
+                }
+                FormuDoldur(id);
+                SeciliAlan = "";
+                SeciliDeger = "";
+            }
+            else
+            {
+                DataTable dt = ctemp.TabloCek("SELECT TOP 1 Kull_KayNo FROM KULLANICILAR WHERE Kull_KayNo > '" + txtKullKayitNo.Text + "'  " +
+                                              "ORDER BY Kull_KayNo ASC");
+                if (dt.Rows.Count > 0)
+                {
+                    id = Convert.ToInt32(dt.Rows[0]["Kull_KayNo"].ToString());
+                }
+                else
+                {
+                    MessageBox.Show("Tablonun son kaydı.");
+                }
+                FormuDoldur(id);
+                SeciliAlan = "";
+                SeciliDeger = "";
+            }
+        }
+
+        private void txtKullaniciAdi_MouseUp(object sender, MouseEventArgs e)
+        {
+            SeciliDeger = txtKullaniciAdi.Text;
+            SeciliAlan = "txtKullaniciAdi.Text";
+        }
+
+        private void txtUzunAdi_MouseUp(object sender, MouseEventArgs e)
+        {
+            SeciliDeger = txtUzunAdi.Text;
+            SeciliAlan = "txtUzunAdi.Text";
+        }
+
+        private void txtEMail_MouseUp(object sender, MouseEventArgs e)
+        {
+            SeciliDeger = txtEMail.Text;
+            SeciliAlan = "txtEMail.Text";
         }
     }
 }

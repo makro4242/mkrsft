@@ -36,10 +36,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.btnGiris = new DevExpress.XtraEditors.SimpleButton();
-<<<<<<< HEAD
-=======
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
->>>>>>> origin/master
             this.dtGununTarihi = new DevExpress.XtraEditors.DateEdit();
             this.btnGetVeritabani = new DevExpress.XtraEditors.ButtonEdit();
             this.txtCalismaYili = new DevExpress.XtraEditors.TextEdit();
@@ -47,10 +43,6 @@
             this.txtGirisSifresi = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-<<<<<<< HEAD
-=======
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
->>>>>>> origin/master
             ((System.ComponentModel.ISupportInitialize)(this.dtGununTarihi.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtGununTarihi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGetVeritabani.Properties)).BeginInit();
@@ -122,10 +114,6 @@
             // groupControl1
             // 
             this.groupControl1.Controls.Add(this.btnGiris);
-<<<<<<< HEAD
-=======
-            this.groupControl1.Controls.Add(this.pictureBox1);
->>>>>>> origin/master
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupControl1.Location = new System.Drawing.Point(0, 301);
             this.groupControl1.Name = "groupControl1";
@@ -135,7 +123,6 @@
             // 
             // btnGiris
             // 
-<<<<<<< HEAD
             this.btnGiris.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.btnGiris.Appearance.Options.UseFont = true;
             this.btnGiris.Dock = System.Windows.Forms.DockStyle.Right;
@@ -145,25 +132,6 @@
             this.btnGiris.TabIndex = 0;
             this.btnGiris.Text = "GİRİŞ";
             this.btnGiris.Click += new System.EventHandler(this.btnGiris_Click);
-=======
-            this.btnGiris.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.btnGiris.Appearance.Options.UseFont = true;
-            this.btnGiris.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnGiris.Location = new System.Drawing.Point(402, 2);
-            this.btnGiris.Name = "btnGiris";
-            this.btnGiris.Size = new System.Drawing.Size(80, 56);
-            this.btnGiris.TabIndex = 1;
-            this.btnGiris.Text = "GİRİŞ";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Location = new System.Drawing.Point(2, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(90, 56);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
->>>>>>> origin/master
             // 
             // dtGununTarihi
             // 
@@ -188,9 +156,10 @@
             // 
             // txtCalismaYili
             // 
+            this.txtCalismaYili.EditValue = "";
             this.txtCalismaYili.Location = new System.Drawing.Point(302, 206);
             this.txtCalismaYili.Name = "txtCalismaYili";
-            this.txtCalismaYili.Size = new System.Drawing.Size(100, 20);
+            this.txtCalismaYili.Size = new System.Drawing.Size(37, 20);
             this.txtCalismaYili.TabIndex = 8;
             // 
             // txtKullaniciAdi
@@ -235,10 +204,6 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-<<<<<<< HEAD
-=======
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
->>>>>>> origin/master
             ((System.ComponentModel.ISupportInitialize)(this.dtGununTarihi.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtGununTarihi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGetVeritabani.Properties)).EndInit();
@@ -258,19 +223,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private DevExpress.XtraEditors.GroupControl groupControl1;
-<<<<<<< HEAD
-=======
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private DevExpress.XtraEditors.SimpleButton btnGiris;
->>>>>>> origin/master
         private DevExpress.XtraEditors.DateEdit dtGununTarihi;
         private DevExpress.XtraEditors.ButtonEdit btnGetVeritabani;
         private DevExpress.XtraEditors.TextEdit txtCalismaYili;
         private DevExpress.XtraEditors.TextEdit txtKullaniciAdi;
         private DevExpress.XtraEditors.TextEdit txtGirisSifresi;
-<<<<<<< HEAD
         private DevExpress.XtraEditors.SimpleButton btnGiris;
-=======
->>>>>>> origin/master
     }
 }

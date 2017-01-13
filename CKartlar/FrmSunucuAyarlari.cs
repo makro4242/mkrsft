@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 
-namespace Makrosoft
+namespace Makrosoft.CKartlar
 {
-    public partial class FrmKullanici : DevExpress.XtraEditors.XtraForm
+    public partial class FrmSunucuAyarlari : DevExpress.XtraEditors.XtraForm
     {
-        public FrmKullanici()
+        public FrmSunucuAyarlari()
         {
             InitializeComponent();
         }
